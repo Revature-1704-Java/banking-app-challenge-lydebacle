@@ -137,10 +137,12 @@ public class BankApp{
                         inputChosen = sc.nextLine();
                         uc.getAccountMap().get(username).deposit(Integer.parseInt(inputChosen));
                         System.out.println("You have deposited " + inputChosen+ "into your account!");
+                        Serialize();
                         break;
                 case 'b': System.out.println("How much would you like to withdraw?");
                         inputChosen = sc.nextLine();
                         uc.getAccountMap().get(username).withdraw(Integer.parseInt(inputChosen));
+                        Serialize();
                         break;
                 case 'c': isDone = true; break;
                 default: System.out.println("Please try again.");break;
